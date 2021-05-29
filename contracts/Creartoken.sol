@@ -9,5 +9,17 @@ contract Creartoken is ERC20PresetMinterPauser {
     mint(address(this), 1000000 ether);
   }
 
+  function mintcustom(address account, uint256 amount) public {
+    _mint(account, amount);
+  }
+
+  function transfer(address sender, address account, uint256 amount) public {
+    _transfer(sender, account, amount);
+  }
+
+  function approve(address owner, address spender, uint256 amount) public {
+    _approve(owner, spender, amount);
+  }
+
   
 }
